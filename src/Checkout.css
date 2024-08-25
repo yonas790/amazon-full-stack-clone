@@ -1,0 +1,27 @@
+.ad_checkout {
+    width: 100%;
+}
+.checkout_title {
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.checkout {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    height: max-content;
+    gap: 20px;
+}
+
+.checkout_left {
+    flex: 3 1 75%;
+}
+
+.checkout_right {
+    flex: 1 1 25%;
+}
