@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './Header'
 import Home from './Home'
-import {BrowserRouter as Router, Routes, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Checkout from './Checkout'
 import Login from './Login'
 import React, { useEffect } from 'react';
@@ -11,22 +11,25 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 function App() {
   const [{}, dispatch] = useStateValue();
   const auth = getAuth();
+  
   useEffect(() => {
-    onAuthStateChanged(auth, (authUser) => {
+    const unsubscribe = onAuthStateChanged(auth, (authUser) => {
       if (authUser) {
         dispatch({
           type: 'SET_USER',
           user: authUser
-        }) 
-  
-      }  else {
+        });
+      } else {
         dispatch({
           type: 'SET_USER',
           user: null
-        })
+        });
       }
-    })
-  })
+    });
+
+    // Clean up the subscription on unmount
+    return () => unsubscribe();
+  }, [auth, dispatch]); // Add dependencies to the dependency array
   return (
     <Router>
       <div className="App">
