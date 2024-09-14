@@ -17,7 +17,7 @@ function Header() {
     }
   return (
     <div className='header'>
-        <Link to='/'>
+        <Link to='/' >
         <img className='header_logo' src='https://supersimple.dev/projects/amazon/images/amazon-logo-white.png' />
         </Link>
         <div className='header_search'>
@@ -25,21 +25,23 @@ function Header() {
             <SearchIcon className='header_searchIcon' />
         </div>
         <div className='header_nav'>
-            <Link to={!user && '/login'}>
+            <Link to={!user && '/login'} className='header_clearLink'>
             <div onClick={handleAuthentication} className='header_option'>
                 <span className='header_optionLineOne'>Hello {!user ? 'Guest': user.email}</span>
                 <span className='header_optionLineTwo'>{user ? 'Sign Out' : 'Sign In'}</span>
             </div>
             </Link>
-            <div className='header_option'>
-                <span className='header_optionLineOne'>Returns</span>
-                <span className='header_optionLineTwo'>& Orders</span>
-            </div>
+            <Link to='/orders' className='header_clearLink'>
+                <div className='header_option'>
+                    <span className='header_optionLineOne'>Returns</span>
+                    <span className='header_optionLineTwo'>& Orders</span>
+                </div>
+            </Link>
             <div className='header_option'>
                 <span className='header_optionLineOne'>Your</span>
                 <span className='header_optionLineTwo'>Prime</span>
             </div>
-            <Link to='/checkout'>
+            <Link to='/checkout' className='header_clearLink'>
             <div className='header_optionBasket'>
                 <ShoppingBasketIcon />
                 <span className='header_optionLineTwo header_basketCount'>
