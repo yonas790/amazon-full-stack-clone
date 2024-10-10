@@ -1,6 +1,6 @@
 # My Projects
 
-[Amazon Project](https://yonas-amazon-cloned.netlify.app/)
+[My Amazon full stack clonnig Project live link](https://yonas-amazon-cloned.netlify.app/)
 
 This is a brief description of my Amazon project. 
 
