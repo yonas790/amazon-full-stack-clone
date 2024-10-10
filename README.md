@@ -1,6 +1,6 @@
 # My Projects
 
-[Amazon Project](https://github.com/yourusername/your-amazon-project)
+[My Amazon Project full stack cloned live link](https://yonas-amazon-cloned.netlify.app/)
 
 This is a brief description of my Amazon project. It is an e-commerce application that allows users to browse products, manage their shopping cart, and make secure purchases.
 
