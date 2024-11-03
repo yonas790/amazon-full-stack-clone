@@ -29,7 +29,7 @@ I have made significant progress while working on this project, focusing on crea
 
 - **Shopping Cart Functionality**: Created a dynamic shopping cart that enables users to add or remove products, update quantities, and view the total cost of their selected items. The cart persists even when users navigate away from the page.
 
-- **Payment System**: Integrated a secure payment gateway that supports transactions in Ethiopian Birr (ETB). This feature allows users to make purchases seamlessly and ensures that sensitive payment information is handled securely.
+- **Payment System**: Integrated a secure payment gateway using stripe. This feature allows users to make purchases seamlessly and ensures that sensitive payment information is handled securely.
 
 - **Order Management**: Implemented an order management system that allows users to view their order history, track the status of their orders, and receive notifications for order updates.
 
